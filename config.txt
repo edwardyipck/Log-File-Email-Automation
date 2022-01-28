@@ -1,0 +1,5 @@
+{"filedir" : r"D:\folder\goes\here",
+"sender_email" : "template@gmail.com",
+"password": "password",
+"textnum" : 10,
+"wait_time" : 1}
