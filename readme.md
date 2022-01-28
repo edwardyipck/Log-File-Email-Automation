@@ -2,11 +2,10 @@
 
 This python script allows you to automatically send emails with the log file attached 
 once a certain phrase appears in the recent logs. 
-This could be used to detect when a program fails and outputs an error in the logs.
+This could be used to detect when a program fails and outputs an error message in the logs.
 
-By selecting a destination folder, the script will look at all files modified within the last
-24 hours for any changes and search for the custom specified phrases set in error_types.csv.
-
+By selecting a destination folder, the script will look at all files modified for any changes 
+within the last 24 hours and search for the custom specified phrases set in error_types.csv.
 
 ## config.txt:
 This is a python dictionary so only edit inside the quotations on the right hand side of the colon
@@ -16,7 +15,6 @@ This is a python dictionary so only edit inside the quotations on the right hand
  - password: Your email password
  - textnum: The number of tail lines to include from the log file in the email
  - wait_time: The number of seconds between each folder search
-
 
 ## error_types.csv:
 This csv is used to define custom phrases, and set email recipients, email titles and body for each phrase
