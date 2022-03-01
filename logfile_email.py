@@ -47,11 +47,15 @@ def email_routine(filedir,file,error_match):
 #Checks for new lines within each file
 def new_line_check(recent_files,prev_data):
     new_data = {}
+
     for file in recent_files:
-        with open(report_folder+file, errors='ignore') as f:
-            text_list = set(frozenset(list(enumerate(f.read().splitlines()))[-30:]))
-            new_data[file] = text_list
-    
+        try:
+            with open(report_folder+file, errors='ignore') as f:
+                text_list = set(frozenset(list(enumerate(f.read().splitlines()))[-30:]))
+                new_data[file] = text_list
+        except:
+            continue
+
     if not prev_data:
         return {},new_data
     
